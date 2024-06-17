@@ -1,0 +1,10 @@
+D:\Projects VS\Разработка КИС\WindowsFormsApp_Pr_3\WindowsFormsApp_Pr_3\bin\Debug\WindowsFormsApp_Pr_3.exe.config
+D:\Projects VS\Разработка КИС\WindowsFormsApp_Pr_3\WindowsFormsApp_Pr_3\bin\Debug\WindowsFormsApp_Pr_3.exe
+D:\Projects VS\Разработка КИС\WindowsFormsApp_Pr_3\WindowsFormsApp_Pr_3\bin\Debug\WindowsFormsApp_Pr_3.pdb
+D:\Projects VS\Разработка КИС\WindowsFormsApp_Pr_3\WindowsFormsApp_Pr_3\obj\Debug\WindowsFormsApp_Pr_3.csproj.AssemblyReference.cache
+D:\Projects VS\Разработка КИС\WindowsFormsApp_Pr_3\WindowsFormsApp_Pr_3\obj\Debug\WindowsFormsApp_Pr_3.Form1.resources
+D:\Projects VS\Разработка КИС\WindowsFormsApp_Pr_3\WindowsFormsApp_Pr_3\obj\Debug\WindowsFormsApp_Pr_3.Properties.Resources.resources
+D:\Projects VS\Разработка КИС\WindowsFormsApp_Pr_3\WindowsFormsApp_Pr_3\obj\Debug\WindowsFormsApp_Pr_3.csproj.GenerateResource.cache
+D:\Projects VS\Разработка КИС\WindowsFormsApp_Pr_3\WindowsFormsApp_Pr_3\obj\Debug\WindowsFormsApp_Pr_3.csproj.CoreCompileInputs.cache
+D:\Projects VS\Разработка КИС\WindowsFormsApp_Pr_3\WindowsFormsApp_Pr_3\obj\Debug\WindowsFormsApp_Pr_3.exe
+D:\Projects VS\Разработка КИС\WindowsFormsApp_Pr_3\WindowsFormsApp_Pr_3\obj\Debug\WindowsFormsApp_Pr_3.pdb
