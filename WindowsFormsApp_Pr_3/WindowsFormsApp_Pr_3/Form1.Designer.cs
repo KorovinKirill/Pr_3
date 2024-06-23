@@ -154,7 +154,7 @@
             this.ReferenceMenuTools});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(710, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(692, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -174,7 +174,7 @@
             this.рассчитатьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.программаРасчётыToolStripMenuItem});
             this.рассчитатьToolStripMenuItem.Name = "рассчитатьToolStripMenuItem";
-            this.рассчитатьToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.рассчитатьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.рассчитатьToolStripMenuItem.Text = "Рассчитать";
             // 
             // программаРасчётыToolStripMenuItem
@@ -182,6 +182,7 @@
             this.программаРасчётыToolStripMenuItem.Name = "программаРасчётыToolStripMenuItem";
             this.программаРасчётыToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.программаРасчётыToolStripMenuItem.Text = "Программа \"Расчёты\"";
+            this.программаРасчётыToolStripMenuItem.Click += new System.EventHandler(this.программаРасчётыToolStripMenuItem_Click);
             // 
             // Razdelenie
             // 
@@ -191,14 +192,16 @@
             // DeleteMenuTools
             // 
             this.DeleteMenuTools.Name = "DeleteMenuTools";
-            this.DeleteMenuTools.Size = new System.Drawing.Size(135, 22);
+            this.DeleteMenuTools.Size = new System.Drawing.Size(180, 22);
             this.DeleteMenuTools.Text = "Очистить";
+            this.DeleteMenuTools.Click += new System.EventHandler(this.DeleteMenuTools_Click);
             // 
             // ExitMenuTools
             // 
             this.ExitMenuTools.Name = "ExitMenuTools";
-            this.ExitMenuTools.Size = new System.Drawing.Size(135, 22);
+            this.ExitMenuTools.Size = new System.Drawing.Size(180, 22);
             this.ExitMenuTools.Text = "Выход";
+            this.ExitMenuTools.Click += new System.EventHandler(this.ExitMenuTools_Click);
             // 
             // ReferenceMenuTools
             // 
@@ -211,8 +214,9 @@
             // AboutProgrammMenuTools
             // 
             this.AboutProgrammMenuTools.Name = "AboutProgrammMenuTools";
-            this.AboutProgrammMenuTools.Size = new System.Drawing.Size(149, 22);
+            this.AboutProgrammMenuTools.Size = new System.Drawing.Size(180, 22);
             this.AboutProgrammMenuTools.Text = "О программе";
+            this.AboutProgrammMenuTools.Click += new System.EventHandler(this.AboutProgrammMenuTools_Click);
             // 
             // tabControl1
             // 
@@ -275,7 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 380);
+            this.ClientSize = new System.Drawing.Size(692, 374);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
