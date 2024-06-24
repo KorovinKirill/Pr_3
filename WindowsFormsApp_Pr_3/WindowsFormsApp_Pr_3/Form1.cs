@@ -21,52 +21,52 @@ namespace WindowsFormsApp_Pr_3
         /// </summary>
         static List<T> MergeLists<T>(List<T> list1, List<T> list2)
         {
-            List<T> result = new List<T>();
+            List<T> resultList = new List<T>();
 
-            for (int i = 0; i < Math.Max(list1.Count, list2.Count); i++)
+            for (int i = 0, j = 0; i < list1.Count || j < list2.Count; i++, j++)
             {
-                if (i % 2 == 0)
+                if (j < list2.Count && j % 2 == 1)
                 {
-                    result.Add(list1[i]);
+                    resultList.Add(list2[j]);
                 }
-                if (i % 2 != 0)
+
+                if (i < list1.Count && i % 2 == 0)
                 {
-                    result.Add(list2[i]);
+                    resultList.Add(list1[i]);
                 }
             }
-            return result;
+            return resultList;
         }
-
         private async void btn_calc_Click(object sender, EventArgs e)
         {
             ErrorProvider errorProvider = new ErrorProvider();
-            if (String.IsNullOrEmpty(textBox1.Text) || String.IsNullOrEmpty(textBox2.Text))
+            if (String.IsNullOrEmpty(str1.Text) || String.IsNullOrEmpty(str2.Text))
             { 
-                if (String.IsNullOrEmpty(textBox1.Text))
+                if (String.IsNullOrEmpty(str1.Text))
                 {
-                    errorProvider.SetError(textBox1, "Поле не должно быть пустым!");
+                    errorProvider.SetError(str1, "Поле не должно быть пустым!");
                     await Task.Delay(2222); // Делей нужен для того, чтобы через определённое время удалялось сообщение об ошибке // await - это оператор, который используется внутри асинхронных методов для ожидания завершения асинхронных операций.
-                    errorProvider.SetError(textBox1, "");
+                    errorProvider.SetError(str1, "");
                 }
-                if (String.IsNullOrEmpty(textBox2.Text))
+                if (String.IsNullOrEmpty(str2.Text))
                 {
-                    errorProvider.SetError(textBox2, "Поле не должно быть пустым!");
+                    errorProvider.SetError(str2, "Поле не должно быть пустым!");
                     await Task.Delay(2222); // Делей нужен для того, чтобы через определённое время удалялось сообщение об ошибке // await - это оператор, который используется внутри асинхронных методов для ожидания завершения асинхронных операций.
-                    errorProvider.SetError(textBox2, "");
+                    errorProvider.SetError(str2, "");
                 }
             }
             else
             {
-                string txt = textBox1.Text;
-                string[] lines = txt.Split(',');
+                string txt = str1.Text;
+                string[] lines = str1.Text.Trim().Split(new char[] { ' ' });
                 List<string> lst1 = new List<string>(lines);
 
-                string txt2 = textBox2.Text;
-                string[] lines2 = txt2.Split(',');
+                string txt2 = str2.Text;
+                string[] lines2 = str2.Text.Trim().Split(new char[] { ' ' });
                 List<string> lst2 = new List<string>(lines2);
 
                 List<string> list3 = MergeLists(lst1, lst2);
-                textBox3.Text = String.Join(", ", list3);
+                result.Text = String.Join(", ", list3);
             }
         }
 
@@ -78,41 +78,41 @@ namespace WindowsFormsApp_Pr_3
         private async void программаРасчётыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ErrorProvider errorProvider = new ErrorProvider();
-            if (String.IsNullOrEmpty(textBox1.Text) || String.IsNullOrEmpty(textBox2.Text))
+            if (String.IsNullOrEmpty(str1.Text) || String.IsNullOrEmpty(str2.Text))
             {
-                if (String.IsNullOrEmpty(textBox1.Text))
+                if (String.IsNullOrEmpty(str1.Text))
                 {
-                    errorProvider.SetError(textBox1, "Поле не должно быть пустым!");
+                    errorProvider.SetError(str1, "Поле не должно быть пустым!");
                     await Task.Delay(2222); // Делей нужен для того, чтобы через определённое время удалялось сообщение об ошибке // await - это оператор, который используется внутри асинхронных методов для ожидания завершения асинхронных операций.
-                    errorProvider.SetError(textBox1, "");
+                    errorProvider.SetError(str1, "");
                 }
-                if (String.IsNullOrEmpty(textBox2.Text))
+                if (String.IsNullOrEmpty(str2.Text))
                 {
-                    errorProvider.SetError(textBox2, "Поле не должно быть пустым!");
+                    errorProvider.SetError(str2, "Поле не должно быть пустым!");
                     await Task.Delay(2222); // Делей нужен для того, чтобы через определённое время удалялось сообщение об ошибке // await - это оператор, который используется внутри асинхронных методов для ожидания завершения асинхронных операций.
-                    errorProvider.SetError(textBox2, "");
+                    errorProvider.SetError(str2, "");
                 }
             }
             else
             {
-                string txt = textBox1.Text;
+                string txt = str1.Text;
                 string[] lines = txt.Split(',');
                 List<string> lst1 = new List<string>(lines);
 
-                string txt2 = textBox2.Text;
+                string txt2 = str2.Text;
                 string[] lines2 = txt2.Split(',');
                 List<string> lst2 = new List<string>(lines2);
 
                 List<string> list3 = MergeLists(lst1, lst2);
-                textBox3.Text = String.Join(", ", list3);
+                result.Text = String.Join(", ", list3);
             }
         }
 
         private void DeleteMenuTools_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
+            str1.Clear();
+            str2.Clear();
+            result.Clear();
         }
 
         private void ExitMenuTools_Click(object sender, EventArgs e)
